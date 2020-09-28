@@ -1,4 +1,4 @@
-/*===== COMMON =====*/
+/*===== FONTS =====*/
 
 @font-face {
   font-family: "OpenSans-Bold";
@@ -20,36 +20,9 @@
   font-weight: normal;
 }
 
-body {
+body{
   margin: 0;
 }
-
-ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-} 
-
-h2, h3, h5, h4{
-  margin: 0;
-} 
-
-a{
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
-}
-
-button{
-  cursor: pointer;
-  border: 0;
-}
-
-input{
-  border: 0;
-  padding: 0;
-}
-
 
 /*===== POPUP =====*/
 
@@ -127,6 +100,8 @@ input{
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
+  border: 0;
+  padding: 0;
 }
 
 .popup_radio_input::before{
@@ -157,10 +132,12 @@ input{
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 130px;
+  padding-right: 0;
   font-size: 13px;
   font-family: OpenSans-Regular, sans-serif;
   background-color: #f4f7f6;
   box-sizing: border-box;
+  border: 0;
 }
 
 .popup_button{
@@ -173,6 +150,8 @@ input{
   font-size: 14px;
   color: #fff;
   margin-top: 30px;
+  cursor: pointer;
+  border: 0;
 }
 
 .popup_button:hover{
@@ -223,19 +202,6 @@ input{
   align-items: center;
 }
 
-.layer_1{
-  width: 180px;
-  height: 35px;
-}
-
-.st0{
-  fill: #B59F5B;
-}
-
-.st1{
-  fill: #FFFFFF;
-}
-
 .menu { 
   font-family: OpenSans-Regular, sans-serif;
   font-size: 13px;
@@ -243,10 +209,15 @@ input{
 
 .menu-list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .menu-link {
   color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .menu-link:hover {
@@ -275,6 +246,7 @@ input{
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
+  margin: 0;
 }
 
 .heading_2::after{
@@ -362,10 +334,7 @@ input{
 
 .block_title{
   margin-top: 15px;
-}
-
-.block_link{
-  color: #fff;
+  margin-bottom: 0;
 }
 
 /*===== MAIN =====*/
@@ -395,6 +364,9 @@ input{
 
 .category-list{
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .category:nth-child(n+2){
@@ -405,6 +377,8 @@ input{
   font-size: 14px;
   color: #b59f5b;
   font-family: OpenSans-Bold, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .category-link:hover{
@@ -424,6 +398,13 @@ input{
   font-size: 20px;
   line-height: 24px;
   font-family: OpenSans-Bold, sans-serif;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.block_link{
+  color: #fff;
 }
 
 .frame-title-link:hover{
@@ -432,7 +413,8 @@ input{
 
 .frame-author{
   font-size: 12px;
-  text-transform: none;
+  text-decoration: none;
+  color: #000;
 }
 
 .times{
@@ -495,6 +477,7 @@ input{
 
 .heading_5{
   margin-top: 2px;
+  margin-bottom: 0;
 }
 
 time{
@@ -508,6 +491,9 @@ time{
   font-size: 14px;
   line-height: 18px;
   font-family: OpenSans-Bold, sans-serif;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
 }
 
 .depiction_link:hover{
@@ -593,6 +579,9 @@ time{
   display: flex;
   flex-wrap: wrap;
   margin-top: 25px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .tag-item{
@@ -606,21 +595,31 @@ time{
   padding: 5px 10px;
   font-family: OpenSans-Bold, sans-serif;
   font-size: 12px;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
 }
 
 .categories-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.categories-item{
   border-bottom: 1px solid #eeeeee;
   padding-bottom: 10px;
 }
 
-.categories-list:nth-child(n+2){
+.categories-item:nth-child(n+2){
   margin-top: 10px;
 }
 
 .categories-link{
   font-size: 14px;
   font-family: OpenSans-Bold;
-  text-transform: none;
+  text-decoration: none;
+  color: #000;
 }
 
 .categories-link:hover{
@@ -649,16 +648,15 @@ time{
   padding-right: 25px;
 }
 
-.product::before{
-  content: "";
-  display: block;
-  width: 350px;
-  height: 270px;
+.product_body{
   border: 3px solid #d3c59d;
-  background-color: transparent;  
-  position: absolute;
-  margin-top: 165px;
-  margin-left: -27px;
+  padding: 27px 23px;
+  margin-top: -30px; 
+  margin-left: -25px;
+  width: 352px;
+  height: 290px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .product{
@@ -667,7 +665,7 @@ time{
 }
 
 .product:nth-child(n+2){
-  margin-left: 113px;
+  margin-left: 124px;
 }
 
 .product_title{
@@ -687,7 +685,7 @@ time{
 
 .mark{
   color: #b59f5b;
-  text-transform: none;
+  text-decoration: none;
 }
 
 .mark:hover{
@@ -718,6 +716,8 @@ time{
   color: white;
   font-size: 12px;
   font-family: OpenSans-Bold, sans-serif;
+  cursor: pointer;
+  border: 0;
 }
 
 .product_button:hover{
@@ -734,6 +734,9 @@ time{
 .socials {
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .socials-item:nth-child(n + 2) {
@@ -745,6 +748,8 @@ time{
   background-size: 20px;
   width: 20px;
   height: 20px;
+  text-decoration: none;
+  color: #000;
 }
 
 .socials-link-twitter {
@@ -783,5 +788,5 @@ time{
   color: #999999;
   font-family: OpenSans-Bold, sans-serif;
   font-size: 12px;
-  text-transform: none;
+  text-decoration: none;
 }
